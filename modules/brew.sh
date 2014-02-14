@@ -1,6 +1,9 @@
 if test ! $(which brew); then
   info_echo "Install Homebrew, a good OS X package manager"
   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+else
+  info_echo "Update Homebrew"
+  brew update
 fi
 
 info_echo "Install Git"
