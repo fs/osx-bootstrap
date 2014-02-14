@@ -10,7 +10,8 @@ info_echo "Install Git"
 brew install git
 
 info_echo "Install GitHub CLI client"
-brew install hub
+brew tap jingweno/gh
+brew install gh
 
 info_echo "Install Postgres, a good open source relational database"
 brew install postgres --no-python
@@ -27,8 +28,8 @@ brew install qt
 info_echo "Install watch, used to execute a program periodically and show the output"
 brew install watch
 
-info_echo "Install autojump, for a faster way to navigate your filesystem"
-brew install autojump
+info_echo "Install z (autojump alternative), for a faster way to navigate your filesystem"
+brew install z
 
 info_echo "Install ssh-copy-id to deliver your public key in a remote machine's authorized_keys"
 brew install ssh-copy-id
