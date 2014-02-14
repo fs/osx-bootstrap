@@ -9,7 +9,7 @@ if ! test -e $clang_path; then
   read -n 1
 
   if ! test -e $clang_path; then
-    info_echo "Command Line Tools does not installed, exiting"
+    error_echo "Command Line Tools does not installed, exiting"
     exit
   fi
 fi
