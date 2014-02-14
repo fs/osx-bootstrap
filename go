@@ -4,7 +4,7 @@ set -e
 
 if [ ! -d ~/.osx-bootstrap ]
 then
-  git clone https://github.com/fs/osx-bootstrap.git ~/.osx-bootstrap
+  git clone -b dev https://github.com/fs/osx-bootstrap.git ~/.osx-bootstrap
 fi
 
 cd ~/.osx-bootstrap
