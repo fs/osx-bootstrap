@@ -1,4 +1,4 @@
-# OsX Bootstrap
+# OS X Bootstrap
 
 Script to set up a Mac OS X for Rails development.
 
