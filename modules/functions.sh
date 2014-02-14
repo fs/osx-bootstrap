@@ -3,11 +3,11 @@ green=$(tput setaf 2)
 color_reset=$(tput sgr0)
 
 error_echo() {
-  echo "\n${red}$1.${color_reset}\n"
+  echo -e "\n${red}$1.${color_reset}\n"
 }
 
 info_echo() {
-  echo "\n${green}$1 ...${color_reset}\n"
+  echo -e "\n${green}$1 ...${color_reset}\n"
 }
 
 version() {
