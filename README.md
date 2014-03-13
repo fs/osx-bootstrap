@@ -38,4 +38,6 @@ bash <(curl -s https://raw.github.com/fs/osx-bootstrap/dev/go)
 
 ## Credits
 
-[Flatstack](http://www.flatstack.com).
+Maintained by Nickolay Abdrafikov
+
+![FlatStack](http://www.flatstack.com/assets/images/logo.png)
