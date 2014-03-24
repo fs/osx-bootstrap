@@ -37,7 +37,7 @@ info_echo "Install Dropbox"
 cask_install dropbox
 
 info_echo "Install f-lux"
-cask_install f-lux
+cask_install flux
 
 info_echo "Install middleclick"
 cask_install middleclick
