@@ -38,6 +38,8 @@ bash <(curl -s https://raw.github.com/fs/osx-bootstrap/dev/go)
 
 ## Credits
 
-Maintained by Nickolay Abdrafikov
+OS X Bootstrap is maintained by [ Nickolay Abdrafikov](http://github.com/nickolayabdrafikov).
+It was written by [Flatstack](http://www.flatstack.com) with the help of our
+[contributors](http://github.com/fs/osx-bootstrap/contributors).
 
-![FlatStack](http://www.flatstack.com/assets/images/logo.png)
+[![Flatstack](http://www.flatstack.com/assets/images/logo.png)](http://www.flatstack.com)
