@@ -497,4 +497,7 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
+# Refresh the menubar to have the change take effect
+sudo killall SystemUIServer
+
 info_echo "Note that some of these changes require a logout/restart to take effect."
