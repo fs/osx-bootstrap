@@ -15,7 +15,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # sudo pmset -a standbydelay 86400
 
 # Disable the sound effects on boot
-# sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=" "
 
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
@@ -25,7 +25,6 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
   defaults write "${domain}" dontAutoLoad -array \
     "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
     "/System/Library/CoreServices/Menu Extras/Volume.menu" \
-    "/System/Library/CoreServices/Menu Extras/Battery.menu" \
     "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
     "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
     "/System/Library/CoreServices/Menu Extras/User.menu"
@@ -159,13 +158,13 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-# defaults write NSGlobalDomain AppleLanguages -array "en" "ru"
-# defaults write NSGlobalDomain AppleLocale -string "ru_RU@currency=RUB"
-# defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-# defaults write NSGlobalDomain AppleMetricUnits -bool true
+defaults write NSGlobalDomain AppleLanguages -array "en" "ru"
+defaults write NSGlobalDomain AppleLocale -string "ru_RU@currency=RUB"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Disable auto-correct
-# defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
@@ -174,9 +173,9 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Screen                                                                      #
 ###############################################################################
 
-# Require password immediately after sleep or screen saver begins
+# Require password after 5 sec. after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+defaults write com.apple.screensaver askForPasswordDelay -int 5
 
 # Save screenshots to the desktop
 # defaults write com.apple.screencapture location -string "${HOME}/Desktop"
@@ -241,8 +240,8 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Enable spring loading for directories
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
-# Remove the spring loading delay for directories
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
+# Set the spring loading delay for directories
+defaults write NSGlobalDomain com.apple.springing.delay -float 0.5
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -258,23 +257,23 @@ defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 # Show item info near icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+# /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
 # Show item info to the right of the icons on the desktop
-/usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
+# /usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
 
 # Enable snap-to-grid for icons on the desktop and in other icon views
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # Increase grid spacing for icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
+# /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
+# /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
 
 # Increase the size of icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 80" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 80" ~/Library/Preferences/com.apple.finder.plist
+# /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 80" ~/Library/Preferences/com.apple.finder.plist
+# /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 80" ~/Library/Preferences/com.apple.finder.plist
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
@@ -316,18 +315,18 @@ defaults write com.apple.dock tilesize -int 36
 # defaults write com.apple.dock minimize-to-application -bool true
 
 # Enable spring loading for all Dock items
-defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+# defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
 # Show indicator lights for open applications in the Dock
-defaults write com.apple.dock show-process-indicators -bool true
+# defaults write com.apple.dock show-process-indicators -bool true
 
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
-defaults write com.apple.dock persistent-apps -array
+# defaults write com.apple.dock persistent-apps -array
 
 # Don’t animate opening applications from the Dock
-defaults write com.apple.dock launchanim -bool false
+# defaults write com.apple.dock launchanim -bool false
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
@@ -340,7 +339,7 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 # defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
-# defaults write com.apple.dock dashboard-in-overlay -bool true
+defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
 # defaults write com.apple.dock mru-spaces -bool false
@@ -359,6 +358,12 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
+
+# Turn off dock icons magnification
+defaults write com.apple.dock magnification -boolean false
+
+# Show dock on left
+defaults write com.apple.dock orientation -string 'left'
 
 # Reset Launchpad
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
@@ -393,6 +398,9 @@ sudo ln -sf /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app 
 # Bottom left screen corner → Start screen saver
 # defaults write com.apple.dock wvous-bl-corner -int 5
 # defaults write com.apple.dock wvous-bl-modifier -int 0
+
+# Refresh the Dock to have the change take effect
+sudo killall Dock
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -438,7 +446,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 ###############################################################################
 
 # Hide Spotlight tray-icon (and subsequent helper)
-#sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
@@ -487,8 +495,8 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
-# Visualize CPU usage in the Activity Monitor Dock icon
-defaults write com.apple.ActivityMonitor IconType -int 5
+# Visualize CPU history in the Activity Monitor Dock icon
+defaults write com.apple.ActivityMonitor IconType -int 6
 
 # Show all processes in Activity Monitor
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
@@ -496,5 +504,8 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # Sort Activity Monitor results by CPU usage
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+# Refresh the menubar to have the change take effect
+sudo killall SystemUIServer
 
 info_echo "Note that some of these changes require a logout/restart to take effect."
