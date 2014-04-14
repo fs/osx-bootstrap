@@ -8,6 +8,7 @@ cask_install iterm2
 
 info_echo "Install Alfred"
 cask_install alfred
+brew cask alfred link
 
 info_echo "Install The Unarchiver"
 cask_install the-unarchiver
@@ -36,7 +37,7 @@ cask_install google-drive
 info_echo "Install Dropbox"
 cask_install dropbox
 
-info_echo "Install f-lux"
+info_echo "Install flux"
 cask_install flux
 
 info_echo "Install middleclick"
