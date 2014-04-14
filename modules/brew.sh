@@ -9,9 +9,9 @@ fi
 info_echo "Install Git"
 brew install git
 
-info_echo "Install GitHub CLI client"
-brew tap jingweno/gh
-brew install gh
+info_echo "Install FS tool"
+brew tap fs/fstool
+brew install fs-tool
 
 info_echo "Install Postgres, a good open source relational database"
 brew install postgres --no-python
