@@ -18,19 +18,19 @@ brew install apple-gcc42
 
 export CC=gcc-4.2
 
-if test -z $(rbenv versions --bare|grep "1.9.3-p484"); then
-  info_echo "Install Ruby 1.9.3-p484"
-  rbenv install 1.9.3-p484
+if test -z $(rbenv versions --bare|grep "1.9.3-p545"); then
+  info_echo "Install Ruby 1.9.3-p545"
+  rbenv install 1.9.3-p545
 fi
 
-if test -z $(rbenv versions --bare|grep "2.1.0"); then
-  info_echo "Install Ruby 2.1.0"
-  rbenv install 2.1.0
+if test -z $(rbenv versions --bare|grep "2.1.1"); then
+  info_echo "Install Ruby 2.1.1"
+  rbenv install 2.1.1
 fi
 
-info_echo "Set Ruby 2.1.0 as global default Ruby"
-rbenv global 2.1.0
-rbenv shell 2.1.0
+info_echo "Set Ruby 2.1.1 as global default Ruby"
+rbenv global 2.1.1
+rbenv shell 2.1.1
 
 info_echo "Update to latest Rubygems version"
 gem update --system
