@@ -40,6 +40,9 @@ cask_install dropbox
 info_echo "Install flux"
 cask_install flux
 
+info_echo "Install spectacle"
+cask_install spectacle
+
 info_echo "Install middleclick"
 cask_install middleclick
 
