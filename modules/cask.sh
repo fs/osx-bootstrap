@@ -43,6 +43,21 @@ cask_install flux
 info_echo "Install spectacle"
 cask_install spectacle
 
+info_echo "Install antirsi"
+cask_install antirsi
+
+info_echo "Install nvalt"
+cask_install nvalt
+
+info_echo "Install caffeine"
+cask_install caffeine
+
+info_echo "Install ibettercharge"
+cask_install ibettercharge
+
+info_echo "Install gfxcardstatus"
+cask_install gfxcardstatus
+
 info_echo "Install middleclick"
 cask_install middleclick
 
