@@ -24,6 +24,12 @@ brew install apple-gcc42
 
 export CC=gcc-4.2
 
+info_echo "Remove readline v6.3.3 (not compatible with ruby)"
+brew uninstall readline
+
+info_echo "Install readline v6.2.4 (compatible with ruby)"
+brew install https://raw.githubusercontent.com/Homebrew/homebrew/0181c8a1633353affefabe257c170edbd6d7c008/Library/Formula/readline.rb
+
 if test -z $(rbenv versions --bare|grep "1.9.3-p545"); then
   info_echo "Install Ruby 1.9.3-p545"
   rbenv install 1.9.3-p545
