@@ -52,8 +52,8 @@ brew cask install antirsi
 info_echo "Install nvalt"
 brew cask install nvalt
 
-info_echo "Install caffeine"
-brew cask install caffeine
+# info_echo "Install caffeine"
+# brew cask install caffeine
 
 info_echo "Install ibettercharge"
 brew cask install ibettercharge
