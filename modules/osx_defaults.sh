@@ -268,8 +268,8 @@ for app in \
   'Google Chrome' \
   Firefox \
   HipChat \
-  Skype
-  'Alfred 2'\
+  Skype \
+  'Alfred 2' \
   AntiRSI \
   'Sublime Text' \
 do
