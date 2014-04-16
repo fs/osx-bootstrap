@@ -1,68 +1,71 @@
 info_echo "Install a friendly homebrew-style CLI workflow for the administration of Mac applications distributed as binaries"
+
 brew tap phinze/cask
 brew tap caskroom/versions
 brew install brew-cask
 
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
+
 info_echo "Install iTerm2"
-cask_install iterm2
+brew cask install iterm2
 
 info_echo "Install Alfred"
-cask_install alfred
+brew cask install alfred
 brew cask alfred link
 
 info_echo "Install The Unarchiver"
-cask_install the-unarchiver
+brew cask install the-unarchiver
 
 info_echo "Install HipChat"
-cask_install hipchat
+brew cask install hipchat
 
 info_echo "Install Skype"
-cask_install skype
+brew cask install skype
 
 info_echo "Install Google Chrome"
-cask_install google-chrome
+brew cask install google-chrome
 
 info_echo "Install Firefox"
-cask_install firefox
+brew cask install firefox
 
 info_echo "Install Balsamiq Mockups"
-cask_install balsamiq-mockups
+brew cask install balsamiq-mockups
 
 info_echo "Install Bittorrent Sync"
-cask_install bittorrent-sync
+brew cask install bittorrent-sync
 
 info_echo "Install Google Drive"
-cask_install google-drive
+brew cask install google-drive
 
 info_echo "Install Dropbox"
-cask_install dropbox
+brew cask install dropbox
 
 info_echo "Install flux"
-cask_install flux
+brew cask install flux
 
 info_echo "Install spectacle"
-cask_install spectacle
+brew cask install spectacle
 
 info_echo "Install antirsi"
-cask_install antirsi
+brew cask install antirsi
 
 info_echo "Install nvalt"
-cask_install nvalt
+brew cask install nvalt
 
 info_echo "Install caffeine"
-cask_install caffeine
+brew cask install caffeine
 
 info_echo "Install ibettercharge"
-cask_install ibettercharge
+brew cask install ibettercharge
 
 info_echo "Install gfxcardstatus"
-cask_install gfxcardstatus
+brew cask install gfxcardstatus
 
 info_echo "Install middleclick"
-cask_install middleclick
+brew cask install middleclick
 
 info_echo "Install Sublime Text 3"
-cask_install sublime-text3
+brew cask install sublime-text3
 
 info_echo "Install Java"
-cask_install java
+brew cask install java

@@ -20,9 +20,5 @@ catch_exit() {
   exit $ret
 }
 
-cask_install() {
-  brew cask install --appdir=~/Applications "$1"
-}
-
 # Catch exit
 trap catch_exit EXIT
