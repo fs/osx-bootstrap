@@ -271,7 +271,7 @@ for app in \
   Skype \
   'Alfred 2' \
   AntiRSI \
-  'Sublime Text' \
+  'Sublime Text'
 do
   defaults write com.apple.dock 'persistent-apps' -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>`readlink ~/Applications/$app.app`/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 done
