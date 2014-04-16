@@ -373,7 +373,7 @@ defaults write com.apple.spotlight orderedItems -array \
 sudo mdutil -i on / > /dev/null
 
 # Rebuild the index from scratch
-sudo mdutil -E / > /dev/null
+# sudo mdutil -E / > /dev/null
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #
