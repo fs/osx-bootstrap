@@ -18,6 +18,7 @@ modules=(functions workplace dotfiles osx_version osx_update cmd_tools ssh brew 
 
 for module in "${modules[@]}"
 do
+  cd ~/.osx-bootstrap
   source modules/$module.sh
 done
 
