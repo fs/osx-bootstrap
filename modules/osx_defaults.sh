@@ -321,6 +321,9 @@ defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 # Hide Safari’s bookmarks bar by default
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
+# Show status bar
+defaults write com.apple.Safari ShowStatusBar -bool true
+
 # Hide Safari’s sidebar in Top Sites
 defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
