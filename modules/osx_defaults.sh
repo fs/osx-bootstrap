@@ -425,6 +425,10 @@ defaults write com.apple.TimeMachine 'DoNotOfferNewDisksForBackup' -bool true
 defaults write com.runningwithcrayons.Alfred-Preferences appearance.theme 'alfred.theme.lightlarge'
 defaults write com.runningwithcrayons.Alfred-Preferences keyboard.locale 'com.apple.keylayout.US'
 
+# add login items
+osascript -e "tell application \"System Events\" to make new login item at end with properties {path:\"`readlink ~/Applications/MiddleClick.app`\", name:\"MiddleClick\", hidden:true}"
+osascript -e "tell application \"System Events\" to make new login item at end with properties {path:\"`readlink ~/Applications/Alfred\ 2.app`\", name:\"Alfred 2\", hidden:false}"
+
 # Kill affected applications
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
 
