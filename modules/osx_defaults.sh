@@ -389,7 +389,17 @@ sudo mdutil -i on / > /dev/null
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Don’t display the annoying prompt when quitting iTerm
-# defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+# Show/hide iTerm with system wide hothey: `§`
+defaults write com.googlecode.iterm2 Hotkey -bool true
+defaults write com.googlecode.iterm2 HotkeyChar -int 167
+defaults write com.googlecode.iterm2 HotkeyCode -int 10
+defaults write com.googlecode.iterm2 HotkeyModifiers -int 256
+
+# Use simple fullscreen mode
+defaults write com.googlecode.iterm2 UseLionStyleFullscreen -bool false
+
 
 ###############################################################################
 # Activity Monitor                                                            #
@@ -411,6 +421,9 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 defaults write com.skype.skype 'SKCheckUpdatesAutomatically' -bool false
 defaults write com.apple.TimeMachine 'DoNotOfferNewDisksForBackup' -bool true
+
+defaults write com.runningwithcrayons.Alfred-Preferences appearance.theme 'alfred.theme.lightlarge'
+defaults write com.runningwithcrayons.Alfred-Preferences keyboard.locale 'com.apple.keylayout.US'
 
 # Kill affected applications
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
