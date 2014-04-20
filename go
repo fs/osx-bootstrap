@@ -14,7 +14,22 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 cd ~/.osx-bootstrap
 
-modules=(functions workplace dotfiles osx_version osx_update cmd_tools ssh brew cask ruby powcx osx_defaults sublime_bootstrap)
+modules=(
+  functions
+  workplace
+  dotfiles
+  osx_version
+  osx_update
+  cmd_tools
+  ssh
+  brew
+  cask
+  ruby
+  node_js
+  powcx
+  osx_defaults
+  sublime_bootstrap
+)
 
 for module in "${modules[@]}"
 do
