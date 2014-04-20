@@ -1,5 +1,16 @@
 #!/bin/sh
 
+if [ ! -d ~/Library/Fonts/Liberation-Mono ]
+then
+  # download
+  curl --output ~/Downloads/Liberation-Mono.zip --progress-bar \
+    "http://www.fontsquirrel.com/fonts/download/Liberation-Mono"
+
+  # extract
+  unzip -q ~/Downloads/Liberation-Mono.zip \
+    -d ~/Library/Fonts/Liberation-Mono
+fi
+
 if [ ! -d ~/Library/Fonts/Inconsolata-LGC ]
 then
   # download
