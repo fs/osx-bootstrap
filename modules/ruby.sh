@@ -14,7 +14,7 @@ brew install ruby-build
 info_echo "Install rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries"
 brew install rbenv-gem-rehash
 
-info_echo "Install rbenv-default-gems to automatically installs the gems listed in the `default-gems` file every time you successfully install a new version of Ruby"
+info_echo 'Install rbenv-default-gems to automatically installs the gems listed in the `default-gems` file every time you successfully install a new version of Ruby'
 brew install rbenv-default-gems
 echo "bundler" > "$(brew --prefix rbenv)/default-gems"
 
