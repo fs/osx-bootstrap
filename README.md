@@ -11,7 +11,7 @@ Mac OS X > 10.9.0
 Run the script:
 
 ```bash
-bash <(curl -s https://raw.github.com/fs/osx-bootstrap/master/go)
+bash <(curl -s https://raw.githubusercontent.com/fs/osx-bootstrap/master/go)
 ```
 
 ## What it sets up
