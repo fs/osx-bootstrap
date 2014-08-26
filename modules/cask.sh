@@ -1,6 +1,6 @@
 info_echo "Install a friendly homebrew-style CLI workflow for the administration of Mac applications distributed as binaries"
 
-brew tap phinze/cask
+brew tap caskroom/cask
 brew tap caskroom/versions
 brew install brew-cask
 
