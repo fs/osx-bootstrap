@@ -16,11 +16,11 @@ cd ~/.osx-bootstrap
 
 modules=(
   functions
-  workplace
-  dotfiles
   osx_version
   osx_update
   cmd_tools
+  projectdir
+  dotfiles
   ssh
   brew
   cask

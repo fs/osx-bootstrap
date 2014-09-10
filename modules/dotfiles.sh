@@ -7,13 +7,4 @@ if [ ! -d ~/.dotfiles ]; then
   cd -
 fi
 
-info_echo "Installing zsh dotfiles to ~/.dotfiles-zsh"
-
-if [ ! -d ~/.dotfiles-zsh ]; then
-  mkdir ~/.dotfiles-zsh
-  git clone --recurse-submodules https://github.com/fs/dotfiles.git ~/.dotfiles-zsh
-  cd ~/.dotfiles-zsh
-  sh install.sh
-fi
-
 cd ~/.osx-bootstrap

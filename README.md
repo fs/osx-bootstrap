@@ -11,7 +11,7 @@ Mac OS X > 10.9.0
 Run the script:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/fs/osx-bootstrap/master/go)
+bash <(curl -s https://raw.githubusercontent.com/fs/osx-bootstrap/master/bin/setup)
 ```
 
 ## What it sets up
@@ -19,7 +19,8 @@ bash <(curl -s https://raw.githubusercontent.com/fs/osx-bootstrap/master/go)
 * Command Line Tools
 * SSH keys
 * Homebrew for managing operating system libraries (OS X only)
-* Git and [GitHub command line client](http://owenou.com/gh/)
+* Git source code management system
+* [FS-Tool](http://fs.github.io/fs-tool/) for creating pull-requests from command line
 * Postgres for storing relational data
 * Redis for storing key-value data
 * ImageMagick for cropping and resizing images
@@ -42,4 +43,4 @@ OS X Bootstrap is maintained by [ Nickolay Abdrafikov](http://github.com/nickola
 It was written by [Flatstack](http://www.flatstack.com) with the help of our
 [contributors](http://github.com/fs/osx-bootstrap/contributors).
 
-[![Flatstack](http://www.flatstack.com/assets/images/logo.png)](http://www.flatstack.com)
+<!-- [![Flatstack](http://www.flatstack.com/assets/images/logo.png)](http://www.flatstack.com) -->
