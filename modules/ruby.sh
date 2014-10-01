@@ -30,19 +30,14 @@ brew uninstall readline
 info_echo "Install readline v6.2.4 (compatible with ruby)"
 brew install https://raw.githubusercontent.com/Homebrew/homebrew/0181c8a1633353affefabe257c170edbd6d7c008/Library/Formula/readline.rb
 
-if test -z $(rbenv versions --bare|grep "1.9.3-p547"); then
-  info_echo "Install Ruby 1.9.3-p547"
-  rbenv install 1.9.3-p547
+if test -z $(rbenv versions --bare|grep "2.1.3"); then
+  info_echo "Install Ruby 2.1.3"
+  rbenv install 2.1.3
 fi
 
-if test -z $(rbenv versions --bare|grep "2.1.2"); then
-  info_echo "Install Ruby 2.1.2"
-  rbenv install 2.1.2
-fi
-
-info_echo "Set Ruby 2.1.2 as global default Ruby"
-rbenv global 2.1.2
-rbenv shell 2.1.2
+info_echo "Set Ruby 2.1.3 as global default Ruby"
+rbenv global 2.1.3
+rbenv shell 2.1.3
 
 info_echo "Update to latest Rubygems version"
 gem update --system
