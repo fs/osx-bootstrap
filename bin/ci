@@ -2,25 +2,17 @@
 
 set -e
 
-if [ ! -d ~/.osx-bootstrap ]
-then
-  git clone -b master https://github.com/fs/osx-bootstrap.git ~/.osx-bootstrap
-fi
-
-cd ~/.osx-bootstrap
+shellcheck --exclude=SC2148 modules/* bin/setup
 
 modules=(
   functions
   osx_version
-  osx_update
   projectdir
-  ssh
   brew
   cask
   ruby
   node_js
   osx_defaults
-  dotfiles
   sublime_bootstrap
 )
 
@@ -28,3 +20,4 @@ for module in "${modules[@]}"
 do
   source "modules/$module.sh"
 done
+

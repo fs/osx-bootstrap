@@ -1,10 +1,12 @@
 # OS X Bootstrap
 
+[![Build Status](https://travis-ci.org/fs/osx-bootstrap.svg)](https://travis-ci.org/fs/osx-bootstrap)
+
 Script to set up a Mac OS X for Rails development.
 
 ## Requirements
 
-Mac OS X > 10.9.0
+Mac OS X > 10.10.0
 
 ## Install
 
@@ -33,13 +35,13 @@ bash <(curl -s https://raw.githubusercontent.com/fs/osx-bootstrap/master/bin/set
 * Ruby Build for installing Rubies
 * Ruby stable for writing general-purpose code
 * Bundler gem for managing Ruby libraries
-* Software: iTerm2, HipChat, Skype, Google Chrome, Firefox, Balsamiq Mockups,
-  Bittorrent Sync, Google Drive, f-lux, Sublime Text 3, Java, Alfred, Dropbox, The Unarchiver
+* Software: iTerm2, HipChat, Skype, Google Chrome, Firefox,
+  Google Drive, f-lux, Sublime Text 3, Java, Dropbox, The Unarchiver
 * Set OS X defaults (faster animation, etc)
 
 ## Credits
 
-OS X Bootstrap is maintained by [ Nickolay Abdrafikov](http://github.com/nickolayabdrafikov).
+OS X Bootstrap is maintained by [Timur Vafin](http://github.com/timurvafin).
 It was written by [Flatstack](http://www.flatstack.com) with the help of our
 [contributors](http://github.com/fs/osx-bootstrap/contributors).
 
