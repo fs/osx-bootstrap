@@ -1,16 +1,10 @@
-if test ! $(which node); then
-  info_echo "Install node.js"
-  brew install node
-else
-  info_echo "Update node.js"
-  brew upgrade node
-fi
+brew_install_or_upgrade "node"
 
 info_echo "Install Grunt-CLI"
-npm install -g grunt-cli
+npm install --global grunt-cli
 
 info_echo "Install Bower"
-npm install -g bower
+npm install --global bower
 
 info_echo "Install Coffeelint"
-npm install -g coffeelint
+npm install --global coffeelint
