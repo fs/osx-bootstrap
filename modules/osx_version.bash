@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+
+osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
+source "$osx_bootstrap/modules/functions.bash"
+
 required_osx_version="10.9.0"
 osx_version=$(/usr/bin/sw_vers -productVersion)
 

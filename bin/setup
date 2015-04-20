@@ -2,15 +2,14 @@
 
 set -e
 
-if [ ! -d ~/.osx-bootstrap ]
+OSX_BOOTSTRAP=${OSX_BOOTSTRAP:-"~/.osx-bootstrap"}
+
+if [ ! -d "$OSX_BOOTSTRAP" ]
 then
-  git clone -b master https://github.com/fs/osx-bootstrap.git ~/.osx-bootstrap
+  git clone -b master https://github.com/fs/osx-bootstrap.git "$OSX_BOOTSTRAP"
 fi
 
-cd ~/.osx-bootstrap
-
 modules=(
-  functions
   osx_version
   osx_update
   projectdir
@@ -26,5 +25,6 @@ modules=(
 
 for module in "${modules[@]}"
 do
-  source "modules/$module.sh"
+  source "$OSX_BOOTSTRAP/modules/$module.bash"
 done
+
