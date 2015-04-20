@@ -36,7 +36,7 @@ bash <(curl -s https://raw.githubusercontent.com/fs/osx-bootstrap/master/bin/set
 * Ruby stable for writing general-purpose code
 * Bundler gem for managing Ruby libraries
 * Software: iTerm2, HipChat, Skype, Google Chrome, Firefox,
-  Google Drive, f-lux, Sublime Text 3, Java, Dropbox, The Unarchiver
+  Google Drive, f-lux, Sublime Text 3, Java, Dropbox, The Unarchiver, Divvy
 * Set OS X defaults (faster animation, etc)
 
 ## Credits
