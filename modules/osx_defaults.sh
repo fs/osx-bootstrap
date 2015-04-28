@@ -217,5 +217,5 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 ###############################################################################
 
 for app in "cfprefsd" "Dock" "Finder" "Safari"  "SystemUIServer" "Terminal" "iTerm"; do
-  killall "${app}" > /dev/null 2>&1
+  killall "${app}" > /dev/null 2>&1 || true
 done
