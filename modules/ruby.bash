@@ -3,8 +3,6 @@
 osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
 source "$osx_bootstrap/modules/functions.bash"
 
-export RBENV_ROOT=/usr/local/var/rbenv
-
 brew_install_or_upgrade "rbenv"
 
 info_echo "Enable shims and autocompletion"

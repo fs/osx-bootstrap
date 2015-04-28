@@ -1,3 +1,6 @@
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export RBENV_ROOT=/usr/local/var/rbenv
+
 red=$(tput setaf 1)
 green=$(tput setaf 2)
 color_reset=$(tput sgr0)
