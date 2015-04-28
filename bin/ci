@@ -13,6 +13,7 @@ modules=(
   node_js
   osx_defaults
   sublime_bootstrap
+  custom
 )
 
 for module in "${modules[@]}"
