@@ -1,5 +1,9 @@
 info_echo "Set OS X defaults"
 
+###############################################################################
+# General UI/UX                                                               #
+###############################################################################
+
 # Set computer name (as done via System Preferences → Sharing)
 hostname=$(whoami)
 sudo scutil --set ComputerName "$hostname"
@@ -23,6 +27,10 @@ done
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
+###############################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+###############################################################################
+
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
@@ -35,9 +43,21 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Enable full keyboard access for all controls
+# (e.g. enable Tab in modal dialogs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+###############################################################################
+# Screen                                                                      #
+###############################################################################
+
 # Require password after 5 sec. after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 5
+
+###############################################################################
+# Finder                                                                      #
+###############################################################################
 
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
@@ -79,6 +99,10 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
+###############################################################################
+# Dock, Dashboard, and hot corners                                            #
+###############################################################################
+
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
@@ -88,7 +112,6 @@ defaults write com.apple.dock persistent-apps -array
 for app in \
   System\ Preferences \
   Safari \
-  Calendar \
   HipChat \
   iTerm \
   Sublime\ Text
@@ -114,9 +137,13 @@ defaults write com.apple.dock magnification -boolean false
 # Show dock on right
 defaults write com.apple.dock orientation -string 'right'
 
-# ###############################################################################
-# # Safari & WebKit                                                             #
-# ###############################################################################
+# Bottom left screen corner → Start screen saver
+defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-modifier -int 0
+
+###############################################################################
+# Safari & WebKit                                                             #
+###############################################################################
 
 # Set Safari’s home page to `about:blank` for faster loading
 defaults write com.apple.Safari HomePage -string "about:blank"
@@ -141,9 +168,9 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
-# ###############################################################################
-# # Spotlight                                                                   #
-# ###############################################################################
+###############################################################################
+# Spotlight                                                                   #
+###############################################################################
 
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
@@ -175,20 +202,20 @@ sudo mdutil -i on / > /dev/null
 # Rebuild the index from scratch
 sudo mdutil -E / > /dev/null
 
-# # Only use UTF-8 in Terminal.app
+###############################################################################
+# Terminal & iTerm 2                                                          #
+###############################################################################
+
+# Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# # Don’t display the annoying prompt when quitting iTerm
+# Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-# # Show/hide iTerm with system wide hothey: `§`
-defaults write com.googlecode.iterm2 Hotkey -bool true
-defaults write com.googlecode.iterm2 HotkeyChar -int 167
-defaults write com.googlecode.iterm2 HotkeyCode -int 10
-defaults write com.googlecode.iterm2 HotkeyModifiers -int 256
+###############################################################################
+# Kill affected applications                                                  #
+###############################################################################
 
-# # Use simple fullscreen mode in iTerm
-defaults write com.googlecode.iterm2 UseLionStyleFullscreen -bool false
-
-# Kill affected applications
-for app in Finder Dock SystemUIServer; do killall "$app" >/dev/null 2>&1; done
+for app in "cfprefsd" "Dock" "Finder" "Safari"  "SystemUIServer" "Terminal" "iTerm"; do
+  killall "${app}" > /dev/null 2>&1 || true
+done
