@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+
+osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
+source "$osx_bootstrap/modules/functions.bash"
+
 export RBENV_ROOT=/usr/local/var/rbenv
 
 brew_install_or_upgrade "rbenv"

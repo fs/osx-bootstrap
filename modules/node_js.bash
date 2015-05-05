@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+
+osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
+source "$osx_bootstrap/modules/functions.bash"
+
 brew_install_or_upgrade "node"
 
 info_echo "Install Grunt-CLI"

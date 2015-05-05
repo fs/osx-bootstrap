@@ -2,10 +2,9 @@
 
 set -e
 
-shellcheck --exclude=SC2148 modules/* bin/setup
+shellcheck -s bash modules/* bin/setup
 
 modules=(
-  functions
   osx_version
   projectdir
   brew
@@ -18,6 +17,6 @@ modules=(
 
 for module in "${modules[@]}"
 do
-  source "modules/$module.sh"
+  source "modules/$module.bash"
 done
 

@@ -10,10 +10,18 @@ Mac OS X > 10.10.0
 
 ## Install
 
-Run the script:
+Run the setup script which will clone repository to `~/.osx-bootstrap` directory
+and run `~/.osx-bootstrap/modules/*` scripts.
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/fs/osx-bootstrap/master/bin/setup)
+```
+
+Or you can run each module script one-by-one:
+
+```bash
+git clone -b master https://github.com/fs/osx-bootstrap.git
+~/.osx-bootstrap/modules/osx_defaults.bash
 ```
 
 ## What it sets up

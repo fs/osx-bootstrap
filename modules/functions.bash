@@ -3,11 +3,11 @@ green=$(tput setaf 2)
 color_reset=$(tput sgr0)
 
 error_echo() {
-  echo -e "\n${red}$1.${color_reset}\n"
+  printf "\n${red}%s.${color_reset}\n" "$1"
 }
 
 info_echo() {
-  echo -e "\n${green}$1 ...${color_reset}\n"
+  printf "\n${green}%s ...${color_reset}\n" "$1"
 }
 
 version() {
@@ -29,12 +29,14 @@ brew_install_or_upgrade() {
 }
 
 brew_is_installed() {
+  # shellcheck disable=SC2155
   local name="$(brew_expand_alias "$1")"
 
   brew list -1 | grep -Fqx "$name"
 }
 
 brew_is_upgradable() {
+  # shellcheck disable=SC2155
   local name="$(brew_expand_alias "$1")"
 
   ! brew outdated --quiet "$name" >/dev/null
@@ -62,6 +64,7 @@ brew_cask_is_installed() {
 }
 
 brew_launchctl_restart() {
+  # shellcheck disable=SC2155
   local name="$(brew_expand_alias "$1")"
   local domain="homebrew.mxcl.$name"
   local plist="$domain.plist"
