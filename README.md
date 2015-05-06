@@ -42,6 +42,8 @@ git clone -b master https://github.com/fs/osx-bootstrap.git
 * Rbenv for managing versions of the Ruby programming language
 * Ruby Build for installing Rubies
 * Ruby stable for writing general-purpose code
+* NVM for managing versions of the Node.js
+* Node.js stable for writing JavaScript general-purpose code
 * Bundler gem for managing Ruby libraries
 * Software: iTerm2, HipChat, Skype, Google Chrome, Firefox,
   Google Drive, f-lux, Sublime Text 3, Java, Dropbox, The Unarchiver, Dash
