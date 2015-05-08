@@ -5,12 +5,13 @@ set -e
 shellcheck -s bash modules/* bin/setup
 
 modules=(
+  functions
   osx_version
   projectdir
   brew
   cask
   ruby
-  node_js
+  node
   osx_defaults
   sublime_bootstrap
 )

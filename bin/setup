@@ -17,7 +17,7 @@ modules=(
   brew
   cask
   ruby
-  node_js
+  node
   osx_defaults
   dotfiles
   sublime_bootstrap
