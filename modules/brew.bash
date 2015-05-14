@@ -23,6 +23,7 @@ brew_install_or_upgrade "watch"
 brew_install_or_upgrade "z"
 brew_install_or_upgrade "ssh-copy-id"
 brew_install_or_upgrade "heroku-toolbelt"
+brew_install_or_upgrade "tmux"
 
 info_echo "Remove outdated versions from the cellar"
 brew cleanup
