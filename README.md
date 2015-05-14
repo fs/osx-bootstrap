@@ -39,12 +39,14 @@ git clone -b master https://github.com/fs/osx-bootstrap.git
 * [Z](https://github.com/rupa/z) (jump around) for a faster way to navigate your filesystem
 * ssh-copy-id to deliver your public key in a remote machine's authorized_keys
 * Heroku Toolbelt for interacting with the Heroku API
+* Tmux for saving project state and switching between projects
 * Rbenv for managing versions of the Ruby programming language in the `/usr/local/var/rbenv`
 * Ruby Build for installing Rubies
 * Ruby stable for writing general-purpose code
 * NVM for managing versions of the Node.js
 * Node.js stable for writing JavaScript general-purpose code
 * Bundler gem for managing Ruby libraries
+* Tmuxinator gem for managing tmux sessions easily
 * Software installed with Brew Cask in to `/Applications` : iTerm2, HipChat, Skype, Google Chrome,
   Firefox, Google Drive, f-lux, Sublime Text 3, Java, Dropbox, The Unarchiver, Dash
 * Set OS X defaults (faster animation, etc)
