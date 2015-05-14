@@ -12,7 +12,8 @@ brew_install_or_upgrade "ruby-build"
 brew_install_or_upgrade "rbenv-gem-rehash"
 
 brew_install_or_upgrade "rbenv-default-gems"
-echo "bundler" > "$(brew --prefix rbenv)/default-gems"
+echo "bundler" >> "$(brew --prefix rbenv)/default-gems"
+echo "tmuxinator" >> "$(brew --prefix rbenv)/default-gems"
 
 if test -z "$(rbenv versions --bare|grep "2.2.1")"; then
   info_echo "Install Ruby 2.2.1"
