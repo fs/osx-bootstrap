@@ -7,8 +7,6 @@ brew_tap "caskroom/cask"
 brew_tap "caskroom/versions"
 brew_install_or_upgrade "brew-cask"
 
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 brew_cask_install "java"
 brew_cask_install "iterm2"
 brew_cask_install "the-unarchiver"
