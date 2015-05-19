@@ -26,6 +26,6 @@ modules=(
 
 for module in "${modules[@]}"
 do
-  source "$OSX_BOOTSTRAP/modules/$module.bash"
+  bash "$OSX_BOOTSTRAP/modules/$module.bash"
 done
 
