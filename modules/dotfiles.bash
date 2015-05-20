@@ -9,6 +9,6 @@ if [ ! -d ~/.dotfiles ]; then
   git clone https://github.com/fs/dotfiles.git ~/.dotfiles
   (
     cd ~/.dotfiles
-    sh script/bootstrap
+    bash script/setup
   )
 fi
