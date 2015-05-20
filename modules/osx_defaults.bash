@@ -221,6 +221,6 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "cfprefsd" "Dock" "Finder" "Safari"  "SystemUIServer" "Terminal" "iTerm"; do
+for app in "cfprefsd" "Dock" "Finder" "Safari"  "SystemUIServer" "iTerm"; do
   killall "${app}" > /dev/null 2>&1 || true
 done
