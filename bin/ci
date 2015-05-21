@@ -17,8 +17,6 @@ modules=(
   custom
 )
 
-for module in "${modules[@]}"
-do
+echo "$(for module in "${modules[@]}"; do
   source "modules/$module.bash"
-done
-
+done)"
