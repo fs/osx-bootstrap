@@ -3,10 +3,6 @@
 osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
 source "$osx_bootstrap/modules/functions.bash"
 
-export NVM_DIR=/usr/local/var/nvm
-
-brew_install_or_upgrade "nvm"
-
 info_echo "Enable NVM alias"
 # we need disable -e during sourcing nvm.sh b/c of
 # https://github.com/creationix/nvm/issues/721
