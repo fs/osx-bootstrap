@@ -12,7 +12,7 @@ brew "fs-tool"
 # Essential terminal utilities
 tap "homebrew/services"
 brew "git"
-brew "postgres"
+brew "postgresql"
 brew "redis"
 brew "imagemagick"
 brew "qt"
