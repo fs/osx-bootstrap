@@ -2,6 +2,7 @@ language: objective-c
 
 before_script:
   - brew install shellcheck
+  - __rvm_unload
 
 script:
   - bin/ci
