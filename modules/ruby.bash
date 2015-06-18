@@ -3,15 +3,10 @@
 osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
 source "$osx_bootstrap/modules/functions.bash"
 
-brew_install_or_upgrade "rbenv"
-
-info_echo "Enable shims and autocompletion"
+info_echo "Enable rbenv alias"
 eval "$(rbenv init -)"
 
-brew_install_or_upgrade "ruby-build"
-brew_install_or_upgrade "rbenv-gem-rehash"
-
-brew_install_or_upgrade "rbenv-default-gems"
+info_echo "Set default gems list"
 echo "bundler" >> "$(brew --prefix rbenv)/default-gems"
 echo "tmuxinator" >> "$(brew --prefix rbenv)/default-gems"
 

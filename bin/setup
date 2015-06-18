@@ -15,13 +15,11 @@ modules=(
   projectdir
   ssh
   brew
-  cask
   ruby
   node
   osx_defaults
   dotfiles
   sublime_bootstrap
-  custom
 )
 
 for module in "${modules[@]}"

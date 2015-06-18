@@ -11,19 +11,9 @@ else
   brew update
 fi
 
-brew_tap "fs/fstool"
-brew_install_or_upgrade "fs-tool"
-brew_install_or_upgrade "git"
-brew_install_or_upgrade "postgres"
-brew_launchctl_restart "postgresql"
-brew_install_or_upgrade "redis"
-brew_install_or_upgrade "imagemagick"
-brew_install_or_upgrade "qt"
-brew_install_or_upgrade "watch"
-brew_install_or_upgrade "z"
-brew_install_or_upgrade "ssh-copy-id"
-brew_install_or_upgrade "heroku-toolbelt"
-brew_install_or_upgrade "tmux"
+info_echo "Install Brew formalue"
+brew tap "Homebrew/bundle" 2> /dev/null
+brew bundle --file="$osx_bootstrap/Brewfile"
 
 info_echo "Remove outdated versions from the cellar"
 brew cleanup

@@ -9,12 +9,10 @@ modules=(
   osx_version
   projectdir
   brew
-  cask
   ruby
   node
   osx_defaults
   sublime_bootstrap
-  custom
 )
 
 for module in "${modules[@]}"
