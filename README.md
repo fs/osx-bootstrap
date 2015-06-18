@@ -51,18 +51,6 @@ git clone -b master https://github.com/fs/osx-bootstrap.git
   Firefox, Google Drive, f-lux, Sublime Text 3, Java, Dropbox, The Unarchiver, Dash
 * Set OS X defaults (faster animation, etc)
 
-## Customization
-
-You can set custom things using `~/.osx-bootstrap-custom` with will be runned at the
-end of `bin/setup` or independetly with `~/.osx-bootstrap/modules/custom.bash`
-
-All functions from `modules/functions.bash` are availible in the `~/.osx-bootstrap-custom`:
-
-```bash
-brew_install_or_upgrade "wget"
-brew_cask_install "divvy"
-```
-
 ## Credits
 
 OS X Bootstrap is maintained by [Timur Vafin](http://github.com/timurvafin).
