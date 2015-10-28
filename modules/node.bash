@@ -11,14 +11,14 @@ set +e
 source "$(brew --prefix nvm)/nvm.sh"
 set -e
 
-if test -z "$(nvm ls|grep "0.12.2")"; then
-  info_echo "Install Node.js 0.12.2"
-  nvm install 0.12.2
+if test -z "$(nvm ls|grep "4.2.1")"; then
+  info_echo "Install Node.js 4.2.1"
+  nvm install 4.2.1
 fi
 
-info_echo "Set Node.js 0.12.2 as global default Node"
-nvm use 0.12.2
-nvm alias default 0.12.2
+info_echo "Set Node.js 4.2.1 as global default Node"
+nvm use 4.2.1
+nvm alias default 4.2.1
 
 info_echo "Install Gulp"
 npm install --global gulp
@@ -29,8 +29,5 @@ npm install --global grunt-cli
 info_echo "Install Bower"
 npm install --global bower
 
-info_echo "Install CoffeeScript"
-npm install --global coffee-script
-
-info_echo "Install CoffeeLint"
-npm install --global coffeelint
+info_echo "Install Npm-Check-Updates"
+npm install --global npm-check-updates
