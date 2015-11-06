@@ -11,14 +11,14 @@ set +e
 source "$(brew --prefix nvm)/nvm.sh"
 set -e
 
-if test -z "$(nvm ls|grep "4.2.1")"; then
-  info_echo "Install Node.js 4.2.1"
-  nvm install 4.2.1
+if test -z "$(nvm ls|grep "5.0.0")"; then
+  info_echo "Install Node.js 5.0.0"
+  nvm install 5.0.0
 fi
 
-info_echo "Set Node.js 4.2.1 as global default Node"
-nvm use 4.2.1
-nvm alias default 4.2.1
+info_echo "Set Node.js 5.0.0 as global default Node"
+nvm use 5.0.0
+nvm alias default 5.0.0
 
 info_echo "Install Gulp"
 npm install --global gulp
