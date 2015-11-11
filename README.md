@@ -6,7 +6,7 @@ Script to set up a Mac OS X for Rails development.
 
 ## Requirements
 
-Mac OS X > 10.10.0
+Mac OS X > 10.11
 
 ## Install
 

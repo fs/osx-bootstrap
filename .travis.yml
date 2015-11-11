@@ -1,8 +1,8 @@
-language: objective-c
 os: osx
 osx_image: osx10.11
 
 before_script:
+  - brew update
   - brew install shellcheck
   - __rvm_unload
 
