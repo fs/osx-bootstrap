@@ -2,7 +2,7 @@
 
 set -e
 
-shellcheck -s bash modules/* bin/setup
+shellcheck --shell bash --exclude=SC1090 modules/* bin/setup
 
 modules=(
   functions
