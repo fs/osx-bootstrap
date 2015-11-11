@@ -21,13 +21,13 @@ nvm use 5.0.0
 nvm alias default 5.0.0
 
 info_echo "Install Gulp"
-npm install --global gulp
+npm install --global --loglevel=silent gulp
 
 info_echo "Install Grunt-CLI"
-npm install --global grunt-cli
+npm install --global --loglevel=silent grunt-cli
 
 info_echo "Install Bower"
-npm install --global bower
+npm install --global --loglevel=silent bower
 
 info_echo "Install Npm-Check-Updates"
-npm install --global npm-check-updates
+npm install --global --loglevel=silent npm-check-updates
