@@ -1,4 +1,6 @@
 language: objective-c
+os: osx
+osx_image: osx10.11
 
 before_script:
   - brew install shellcheck
