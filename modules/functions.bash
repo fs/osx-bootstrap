@@ -26,3 +26,7 @@ catch_exit() {
 
 # Catch exit
 trap catch_exit EXIT
+
+# Setup loggin
+exec > >(tee -i /tmp/osx-bootstrap."$(date +%Y-%m-%d-%H-%M-%S)".log)
+exec 2>&1
