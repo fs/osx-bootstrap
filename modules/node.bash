@@ -20,14 +20,17 @@ info_echo "Set Node.js 5.0.0 as global default Node"
 nvm use 5.0.0
 nvm alias default 5.0.0
 
+export npm_config_global=true
+export npm_config_loglevel=silent
+
 info_echo "Install Gulp"
-npm install --global --loglevel=silent gulp
+npm install gulp
 
 info_echo "Install Grunt-CLI"
-npm install --global --loglevel=silent grunt-cli
+npm install grunt-cli
 
 info_echo "Install Bower"
-npm install --global --loglevel=silent bower
+npm install bower
 
 info_echo "Install Npm-Check-Updates"
-npm install --global --loglevel=silent npm-check-updates
+npm install npm-check-updates
