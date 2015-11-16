@@ -20,7 +20,7 @@ version() {
 
 catch_exit() {
   ret=$?
-  test $ret -ne 0 && error_echo "\n\nInstallation fails" >&2
+  test $ret -ne 0 && error_echo "Installation fails" >&2
   exit $ret
 }
 
