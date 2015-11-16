@@ -21,4 +21,4 @@ do
 done
 
 info_echo "Make sure we could install essential gems"
-gem install pg puma sidekiq capybara-webkit eventmachine
+gem install pg puma sidekiq capybara-webkit eventmachine mini_magick
