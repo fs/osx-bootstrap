@@ -17,3 +17,6 @@ brew bundle --file="$osx_bootstrap/Brewfile"
 
 info_echo "Remove outdated versions from the cellar"
 brew cleanup
+
+info_echo "Make sure Homebrew configured properly"
+brew doctor
