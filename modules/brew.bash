@@ -15,9 +15,9 @@ info_echo "Install Brew formalue"
 brew tap "Homebrew/bundle" 2> /dev/null
 brew bundle --file="$osx_bootstrap/Brewfile"
 
+# https://github.com/eventmachine/eventmachine/issues/602#issuecomment-152184551
 info_echo "Link keg-only openssl to /usr/local to let software outside of Homebrew to find it"
-info_echo "https://github.com/eventmachine/eventmachine/issues/602#issuecomment-152184551"
-brew link openssl --force
+brew unlink openssl && brew link openssl --force
 
 info_echo "Remove outdated versions from the cellar"
 brew cleanup
