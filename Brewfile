@@ -21,6 +21,7 @@ brew "z"
 brew "ssh-copy-id"
 brew "heroku-toolbelt"
 brew "tmux"
+brew "openssl"
 
 # Essential Mac applications
 tap "caskroom/cask"

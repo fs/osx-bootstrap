@@ -20,5 +20,5 @@ do
   source "modules/$module.bash"
 done
 
-# Make sure we could install essential gems
+info_echo "Make sure we could install essential gems"
 gem install pg puma sidekiq capybara-webkit eventmachine
