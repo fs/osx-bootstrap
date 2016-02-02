@@ -25,7 +25,6 @@ brew "tmux"
 # Essential Mac applications
 tap "caskroom/cask"
 tap "caskroom/versions"
-brew "brew-cask"
 
 cask "java"
 cask "iterm2"
