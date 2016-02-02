@@ -2,6 +2,7 @@ os: osx
 osx_image: osx10.11
 
 before_script:
+  - brew uninstall --force brew-cask
   - brew update
   - brew install shellcheck
   - __rvm_unload
