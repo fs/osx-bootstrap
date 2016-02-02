@@ -44,5 +44,4 @@ brew "nvm"
 # Ruby
 brew "rbenv"
 brew "ruby-build"
-brew "rbenv-gem-rehash"
 brew "rbenv-default-gems"
