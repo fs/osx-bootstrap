@@ -10,14 +10,16 @@ info_echo "Set default gems list"
 echo "bundler" >> "$(brew --prefix rbenv)/default-gems"
 echo "tmuxinator" >> "$(brew --prefix rbenv)/default-gems"
 
-if test -z "$(rbenv versions --bare|grep "2.2.4")"; then
-  info_echo "Install Ruby 2.2.4"
-  rbenv install 2.2.4
+ruby_version="2.3.1"
+
+if test -z "$(rbenv versions --bare|grep $ruby_version)"; then
+  info_echo "Install Ruby $ruby_version"
+  rbenv install $ruby_version
 fi
 
-info_echo "Set Ruby 2.2.4 as global default Ruby"
-rbenv global 2.2.4
-rbenv shell 2.2.4
+info_echo "Set Ruby $ruby_version as global default Ruby"
+rbenv global $ruby_version
+rbenv shell $ruby_version
 
 info_echo "Update to latest Rubygems version"
 gem update --system --no-document
