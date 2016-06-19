@@ -101,6 +101,11 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
+# Set $HOME as the default location for new Finder windows
+# For other paths, use `PfLo` and `file:///full/path/here/`
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
+
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
