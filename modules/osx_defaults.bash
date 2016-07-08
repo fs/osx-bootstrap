@@ -45,6 +45,9 @@ defaults write NSGlobalDomain AppleLocale -string "ru_RU@currency=RUB"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
+# Accelerate cursor
+defaults write NSGlobalDomain KeyRepeat -int 0
+
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
