@@ -33,7 +33,7 @@ cask "hipchat"
 cask "google-chrome"
 cask "firefox"
 cask "dropbox"
-cask "sublime-text3"
+cask "sublime-text"
 cask "spectacle"
 cask "dash"
 
