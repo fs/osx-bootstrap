@@ -56,14 +56,6 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 ###############################################################################
-# Screen                                                                      #
-###############################################################################
-
-# Require password after 5 sec. after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 5
-
-###############################################################################
 # Finder                                                                      #
 ###############################################################################
 

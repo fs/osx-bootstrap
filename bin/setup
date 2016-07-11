@@ -18,6 +18,7 @@ modules=(
   ruby
   node
   osx_defaults
+  osx_security
   dotfiles
   sublime_bootstrap
 )
