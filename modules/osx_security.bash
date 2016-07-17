@@ -3,11 +3,12 @@
 osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
 source "$osx_bootstrap/modules/functions.bash"
 
-info_echo "Require password after 5 sec. after sleep or screen saver begins"
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 5
+info_echo "Run osxlockdown"
+sudo vendor/osxlockdown/osxlockdown -remediate -commands_file vendor/osxlockdown/commands.yaml
 
-info_echo "Enabling FileVault"
-sudo fdesetup enable
+info_echo "Expose hidden files and Library folder in Finder"
+defaults write com.apple.finder AppleShowAllFiles -bool true
+chflags nohidden ~/Library
 
-# TODO: enable firewall
+info_echo "Empty Trash securely by default"
+defaults write com.apple.finder EmptyTrashSecurely -bool true
