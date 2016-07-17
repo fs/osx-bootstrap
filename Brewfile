@@ -21,6 +21,7 @@ brew "z"
 brew "ssh-copy-id"
 brew "heroku-toolbelt"
 brew "tmux"
+brew "curl", args: ["with-openssl"]
 
 # Essential Mac applications
 tap "caskroom/cask"
