@@ -230,7 +230,7 @@
   fix_command: |
     /usr/libexec/PlistBuddy -c "Add StandardViewOptions:ColumnViewOptions:ShowIconThumbnails bool NO" "/Library/Preferences/com.apple.finder.plist" && /usr/libexec/PlistBuddy -c "Add StandardViewSettings:ListViewSettings:showIconPreview bool NO" "/Library/Preferences/com.apple.finder.plist" && /usr/libexec/PlistBuddy -c "Add StandardViewSettings:IconViewSettings:showIconPreview bool NO" "/Library/Preferences/com.apple.finder.plist" && /usr/libexec/PlistBuddy -c "Add StandardViewSettings:ExtendedListViewSettings:showIconPreview bool NO" "/Library/Preferences/com.apple.finder.plist" && /usr/libexec/PlistBuddy -c "Add StandardViewOptions:ColumnViewOptions:ShowPreview bool NO" "/Library/Preferences/com.apple.finder.plist" && /usr/libexec/PlistBuddy -c "Add StandardViewSettings:ListViewSettings:showPreview bool NO" "/Library/Preferences/com.apple.finder.plist" && /usr/libexec/PlistBuddy -c "Add StandardViewSettings:IconViewSettings:showPreview bool NO" "/Library/Preferences/com.apple.finder.plist" &&  /usr/libexec/PlistBuddy -c "Add StandardViewSettings:ExtendedListViewSettings:showPreview bool NO" "/Library/Preferences/com.apple.finder.plist"
   comment: "TODO: I'm only checking one item, check all"
-  enabled: true
+  enabled: false
 
 
 - title: "Secure Safari by crippling it"
