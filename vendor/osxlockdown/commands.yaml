@@ -43,7 +43,7 @@
     sudo systemsetup getusingnetworktime | grep 'Network Time: Off'
   fix_command: |
     sudo systemsetup setusingnetworktime off
-  enabled: true
+  enabled: false
 
 
 - title: "Set an inactivity interval of 10 minutes or less for the screen saver"
