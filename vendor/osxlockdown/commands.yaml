@@ -221,7 +221,7 @@
     networksetup -listallnetworkservices | while read i; do SUPPORT=$(networksetup -getinfo "$i" | grep "IPv6: Automatic") && if [ -n "$SUPPORT" ]; then exit 1; fi; done; exit 0
   fix_command: |
     networksetup -listallnetworkservices | while read i; do SUPPORT=$(networksetup -getinfo "$i" | grep "IPv6: Automatic") && if [ -n "$SUPPORT" ]; then networksetup -setv6off "$i"; fi; done;
-  enabled: true
+  enabled: false
 
 
 - title: "Disable Previews"
