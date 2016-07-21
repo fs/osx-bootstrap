@@ -19,5 +19,8 @@ brew bundle --file="$osx_bootstrap/Brewfile"
 info_echo "Link keg-only openssl to /usr/local to let software outside of Homebrew to find it"
 brew unlink openssl && brew link openssl --force
 
+info_echo "Link Curl with openssl"
+brew link --force curl
+
 info_echo "Remove outdated versions from the cellar"
 brew cleanup
