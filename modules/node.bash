@@ -11,14 +11,14 @@ set +e
 source "$(brew --prefix nvm)/nvm.sh"
 set -e
 
-if test -z "$(nvm ls|grep "5.5.0")"; then
-  info_echo "Install Node.js 5.5.0"
-  nvm install 5.5.0
+if test -z "$(nvm ls|grep "node")"; then
+  info_echo "Install latest Node.js version"
+  nvm install node
 fi
 
-info_echo "Set Node.js 5.5.0 as global default Node"
-nvm use 5.5.0
-nvm alias default 5.5.0
+info_echo "Set latest Node.js version as global default Node"
+nvm use node
+nvm alias default node
 
 export npm_config_global=true
 export npm_config_loglevel=silent
