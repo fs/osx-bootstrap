@@ -10,7 +10,9 @@ modules=(
   projectdir
   brew
   ruby
-  node
+  # disable node module while we can't figure out why it fails on Travis
+  # https://travis-ci.org/fs/osx-bootstrap/builds/161264224
+  # node
   osx_defaults
   osx_security
   sublime_bootstrap
