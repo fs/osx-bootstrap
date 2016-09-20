@@ -8,7 +8,7 @@ modules=(
   functions
   # osx_version
   # projectdir
-  # brew
+  brew
   # ruby
   node
   # osx_defaults
