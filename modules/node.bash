@@ -3,13 +3,10 @@
 osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
 source "$osx_bootstrap/modules/functions.bash"
 
+info_echo "NVM_DIR: $NVM_DIR"
+
 info_echo "Enable NVM alias"
-# we need disable -e during sourcing nvm.sh b/c of
-# https://github.com/creationix/nvm/issues/721
-# https://github.com/travis-ci/travis-ci/issues/3854#issuecomment-99492695
-set +e
 source "$(brew --prefix nvm)/nvm.sh"
-set -e
 
 if test -z "$(nvm ls|grep "node")"; then
   info_echo "Install latest Node.js version"
