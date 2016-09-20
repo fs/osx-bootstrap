@@ -6,14 +6,14 @@ shellcheck --shell bash --exclude=SC1090 modules/* bin/setup
 
 modules=(
   functions
-  osx_version
-  projectdir
-  brew
-  ruby
+  # osx_version
+  # projectdir
+  # brew
+  # ruby
   node
-  osx_defaults
-  osx_security
-  sublime_bootstrap
+  # osx_defaults
+  # osx_security
+  # sublime_bootstrap
 )
 
 for module in "${modules[@]}"
