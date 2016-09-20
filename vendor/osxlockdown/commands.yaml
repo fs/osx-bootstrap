@@ -156,7 +156,7 @@
     pmset -g | grep DestroyFVKeyOnStandby | grep 1
   fix_command: |
     sudo pmset -a destroyfvkeyonstandby 1
-  enabled: true
+  enabled: false
 
 
 - title: "Enable hibernation mode (no memory power on sleep)"
@@ -164,7 +164,7 @@
     pmset -g | grep hibernatemode | grep 25
   fix_command: |
     sudo pmset -a hibernatemode 25
-  enabled: true
+  enabled: false
 
 
 - title: "Enable Gatekeeper"
