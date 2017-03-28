@@ -48,7 +48,7 @@ git clone -b master https://github.com/fs/osx-bootstrap.git
 * Bundler gem for managing Ruby libraries
 * Tmuxinator gem for managing tmux sessions easily
 * Software installed with Brew Cask in to `/Applications` : iTerm2, Slack, Skype, Google Chrome,
-  Firefox, Google Drive, f-lux, Sublime Text 3, Java, Dropbox, The Unarchiver, Dash
+  Firefox, Google Drive, Sublime Text 3, Java, Dropbox, The Unarchiver, Dash
 * Set OS X defaults (faster animation, etc)
 
 ## Credits
