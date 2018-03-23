@@ -8,9 +8,9 @@ eval "$(rbenv init -)"
 
 info_echo "Set default gems list"
 echo "bundler" >> "$(brew --prefix rbenv)/default-gems"
-echo "tmuxinator" >> "$(brew --prefix rbenv)/default-gems"
 
-ruby_version="2.3.1"
+info_echo "Installing latest stable Ruby..."
+ruby_version="$(rbenv install -l | grep -E "^\\s*([.0-9]+)$" | tail -1)"
 
 if test -z "$(rbenv versions --bare|grep $ruby_version)"; then
   info_echo "Install Ruby $ruby_version"
@@ -22,7 +22,4 @@ rbenv global $ruby_version
 rbenv shell $ruby_version
 
 info_echo "Update to latest Rubygems version"
-gem update --system --no-document
-
-info_echo "Installing Bundler to install project-specific Ruby gems"
-gem install bundler --no-document
+yes | gem update --system --no-document

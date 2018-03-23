@@ -2,11 +2,11 @@
 
 [![Build Status](https://travis-ci.org/fs/osx-bootstrap.svg?branch=master)](https://travis-ci.org/fs/osx-bootstrap)
 
-Script to set up a Mac OS X for Rails development.
+Script to set up a macOS X for Rails development.
 
 ## Requirements
 
-Mac OS X > 10.11
+macOS X version >= 10.11
 
 ## Install
 
@@ -26,30 +26,35 @@ git clone -b master https://github.com/fs/osx-bootstrap.git
 
 ## What it sets up
 
-* Command Line Tools
+* OS X Command Line Tools
 * SSH keys
-* Homebrew for managing operating system libraries (OS X only)
-* Git source code management system
-* [FS-Tool](http://fs.github.io/fs-tool/) for creating pull-requests from command line
-* Postgres for storing relational data
-* Redis for storing key-value data
-* ImageMagick for cropping and resizing images
-* Qt for headless JavaScript testing via Capybara Webkit
-* Watch for periodically executing a program and displaying the output
-* [Z](https://github.com/rupa/z) (jump around) for a faster way to navigate your filesystem
-* ssh-copy-id to deliver your public key in a remote machine's authorized_keys
-* Heroku Toolbelt for interacting with the Heroku API
-* Tmux for saving project state and switching between projects
-* Rbenv for managing versions of the Ruby programming language in the `/usr/local/var/rbenv`
-* Ruby Build for installing Rubies
-* Ruby stable for writing general-purpose code
-* NVM for managing versions of the Node.js
-* Node.js stable for writing JavaScript general-purpose code
-* Bundler gem for managing Ruby libraries
-* Tmuxinator gem for managing tmux sessions easily
-* Software installed with Brew Cask in to `/Applications` : iTerm2, HipChat, Skype, Google Chrome,
-  Firefox, Google Drive, f-lux, Sublime Text 3, Java, Dropbox, The Unarchiver, Dash
-* Set OS X defaults (faster animation, etc)
+* **Homebrew** for managing operating system libraries (OS X only)
+* **git** source code management system
+* **Postgresql** for storing relational data
+* **Redis** for storing key-value data
+* **ImageMagick** for cropping and resizing images
+* **Qt** for headless JavaScript testing via Capybara Webkit
+* **watch** for periodically executing a program and displaying the output
+* **[Z]**(https://github.com/rupa/z) (jump around) for a faster way to navigate your filesystem
+* **ssh-copy-id** to deliver your public key in a remote machine's authorized_keys
+* **Heroku Toolbelt** for interacting with the Heroku API
+* **tmux** for saving project state and switching between projects
+* **rbenv** for managing versions of the Ruby programming language in the `/usr/local/var/rbenv`
+* **ruby-build** for installing Ruby versions
+* **Ruby** programming language, latest stable version
+* **NVM** for managing versions of the Node.js
+* **Node.js** stable for writing JavaScript general-purpose code
+* **bundler** gem for managing Ruby libraries
+* Software installed with Brew Cask in to `/Applications`:
+  * iTerm2
+  * Skype
+  * Slack
+  * Google Chrome,
+  * Sublime Text 3
+  * Java
+  * The Unarchiver
+  * Spectacle
+* Set OS X defaults (faster animation, security settings etc)
 
 ## Credits
 

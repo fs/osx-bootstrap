@@ -7,15 +7,15 @@ green=$(tput setaf 2)
 color_reset=$(tput sgr0)
 
 error_echo() {
-  printf "\n${red}%s.${color_reset}\n" "$1"
+  printf "\\n${red}%s.${color_reset}\\n" "$1"
 }
 
 info_echo() {
-  printf "\n${green}%s ...${color_reset}\n" "$1"
+  printf "\\n${green}%s ...${color_reset}\\n" "$1"
 }
 
 version() {
-  echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }'
+  echo "$@" | awk -F. '{ printf("%d%03d%03d%03d", $1,$2,$3,$4); }'
 }
 
 catch_exit() {
