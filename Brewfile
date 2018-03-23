@@ -7,17 +7,20 @@
 
 # Essential terminal utilities
 tap "homebrew/services"
-brew "readline"
+brew "readline", link: true
 brew "git"
 brew "postgresql"
 brew "redis"
 brew "imagemagick"
-brew "qt@5.5"
+# https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit#macos-high-sierra-1013-macos-sierra-1012-el-capitan-1011-and-yosemite-1010
+brew "qt@5.5", link: true
 brew "watch"
 brew "z"
 brew "ssh-copy-id"
 brew "heroku-toolbelt"
 brew "tmux"
+# https://github.com/eventmachine/eventmachine/issues/602#issuecomment-152184551
+brew "openssl", link: true
 brew "curl", args: ["with-openssl"]
 
 # Essential Mac applications
