@@ -15,7 +15,7 @@ info_echo() {
 }
 
 version() {
-  echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\\n", $1,$2,$3,$4); }'
+  echo "$@" | awk -F. '{ printf("%d%03d%03d%03d", $1,$2,$3,$4); }'
 }
 
 catch_exit() {
