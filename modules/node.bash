@@ -19,21 +19,3 @@ fi
 info_echo "Set latest Node.js version as global default Node"
 nvm use node
 nvm alias default node
-
-export npm_config_global=true
-export npm_config_loglevel=silent
-
-info_echo "Install Gulp"
-npm install gulp
-
-info_echo "Install Grunt-CLI"
-npm install grunt-cli
-
-info_echo "Install Bower"
-npm install bower
-
-info_echo "Install Npm-Check-Updates"
-npm install npm-check-updates
-
-info_echo "Install PhantomJS"
-npm install phantomjs-prebuilt
