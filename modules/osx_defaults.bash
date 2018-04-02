@@ -108,7 +108,6 @@ defaults write com.apple.dock persistent-apps -array
 for app in \
   System\ Preferences \
   Safari \
-  HipChat \
   iTerm \
   Sublime\ Text
 do
