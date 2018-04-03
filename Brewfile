@@ -8,8 +8,7 @@
 # Essential terminal utilities
 tap "homebrew/services"
 
-# https://github.com/eventmachine/eventmachine/issues/602#issuecomment-152184551
-brew "openssl", link: true
+brew "openssl"
 brew "readline", link: true
 brew "git"
 brew "postgresql"
