@@ -2,7 +2,8 @@ os: osx
 osx_image: xcode9.3beta
 
 before_script:
-  - brew uninstall --force brew-cask openssl
+  - brew uninstall --force brew-cask
+  - brew unlink openssl
   - brew update
   - brew install shellcheck
   - __rvm_unload
