@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix)/opt/openssl"
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix)/opt/openssl"
+export RUBY_CONFIGURE_OPTS
 
 osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
 source "$osx_bootstrap/modules/functions.bash"
