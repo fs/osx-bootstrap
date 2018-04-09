@@ -21,6 +21,7 @@ modules=(
   osx_security
   dotfiles
   sublime_bootstrap
+  osx_start
 )
 
 for module in "${modules[@]}"
