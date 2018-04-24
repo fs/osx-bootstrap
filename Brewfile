@@ -7,6 +7,8 @@
 
 # Essential terminal utilities
 tap "homebrew/services"
+
+brew "openssl"
 brew "readline", link: true
 brew "git"
 brew "postgresql"
@@ -19,8 +21,6 @@ brew "z"
 brew "ssh-copy-id"
 brew "heroku-toolbelt"
 brew "tmux"
-# https://github.com/eventmachine/eventmachine/issues/602#issuecomment-152184551
-brew "openssl", link: true
 brew "curl", args: ["with-openssl"]
 
 # Essential Mac applications
