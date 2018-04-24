@@ -20,7 +20,7 @@ brew "ssh-copy-id"
 brew "heroku-toolbelt"
 brew "tmux"
 # https://github.com/eventmachine/eventmachine/issues/602#issuecomment-152184551
-brew "openssl", link: true
+brew "openssl"
 brew "curl", args: ["with-openssl"]
 
 # Essential Mac applications
