@@ -14,12 +14,10 @@ brew "git"
 brew "postgresql"
 brew "redis"
 brew "imagemagick"
-# https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit#macos-high-sierra-1013-macos-sierra-1012-el-capitan-1011-and-yosemite-1010
-brew "qt@5.5", link: true
 brew "watch"
 brew "z"
 brew "ssh-copy-id"
-brew "heroku-toolbelt"
+brew "heroku/brew/heroku"
 brew "tmux"
 brew "curl", args: ["with-openssl"]
 

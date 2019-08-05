@@ -3,7 +3,7 @@
 osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
 source "$osx_bootstrap/modules/functions.bash"
 
-if test ! "$(which brew)"; then
+if test ! "$(command -v brew)"; then
   info_echo "Install Homebrew, a good OS X package manager"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
