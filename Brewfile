@@ -9,33 +9,34 @@
 tap "homebrew/services"
 tap "heroku/brew"
 
-brew "openssl"
-brew "readline", link: true
-brew "git"
-brew "postgresql"
-brew "redis"
-brew "imagemagick@7", link: true
-brew "watch"
-brew "z"
-brew "ssh-copy-id"
-brew "heroku/brew/heroku"
-brew "tmux"
-brew "curl"
-brew "phantomjs"
 brew "chromedriver"
+brew "curl"
+brew "git"
+brew "heroku/brew/heroku"
+brew "imagemagick@7", link: true
+brew "openssl"
+brew "phantomjs"
+brew "postgresql"
+brew "readline", link: true
+brew "redis"
+brew "ssh-copy-id"
+brew "tmux"
+brew "watch"
+brew "yarn"
+brew "z"
 
 # Essential Mac applications
 tap "caskroom/cask"
 tap "caskroom/versions"
 
-cask "java"
-cask "zoomus"
-cask "iterm2"
-cask "the-unarchiver"
 cask "google-chrome"
-cask "sublime-text"
+cask "iterm2"
+cask "java"
 cask "slack"
 cask "spectacle"
+cask "sublime-text"
+cask "the-unarchiver"
+cask "zoomus"
 
 # Node version manager
 brew "nvm"
