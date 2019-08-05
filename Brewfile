@@ -7,26 +7,29 @@
 
 # Essential terminal utilities
 tap "homebrew/services"
+tap "heroku/brew"
 
 brew "openssl"
 brew "readline", link: true
 brew "git"
 brew "postgresql"
 brew "redis"
-brew "imagemagick"
+brew "imagemagick@7", link: true
 brew "watch"
 brew "z"
 brew "ssh-copy-id"
 brew "heroku/brew/heroku"
 brew "tmux"
-brew "curl", args: ["with-openssl"]
+brew "curl"
+brew "phantomjs"
+brew "chromedriver"
 
 # Essential Mac applications
 tap "caskroom/cask"
 tap "caskroom/versions"
 
 cask "java"
-cask "skype"
+cask "zoomus"
 cask "iterm2"
 cask "the-unarchiver"
 cask "google-chrome"

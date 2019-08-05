@@ -6,7 +6,7 @@ Script to set up a macOS X for Rails development.
 
 ## Requirements
 
-macOS X version >= 10.13
+macOS X version >= 10.14
 
 ## Install
 
@@ -32,8 +32,7 @@ git clone -b master https://github.com/fs/osx-bootstrap.git
 * **git** source code management system
 * **Postgresql** for storing relational data
 * **Redis** for storing key-value data
-* **ImageMagick** for cropping and resizing images
-* **Qt** for headless JavaScript testing via Capybara Webkit
+* **ImageMagick 7** for cropping and resizing images
 * **watch** for periodically executing a program and displaying the output
 * **[Z](https://github.com/rupa/z)** (jump around) for a faster way to navigate your filesystem
 * **ssh-copy-id** to deliver your public key in a remote machine's authorized_keys
