@@ -11,7 +11,10 @@ set +e
 source "$(brew --prefix nvm)/nvm.sh"
 set -e
 
-nvm install node --lts
+if test -z "$(nvm ls|grep "node")"; then
+  info_echo "Install latest LTS Node.js version"
+  nvm install node --lts
+fi
 
 info_echo "Set latest Node.js version as global default Node"
 nvm use node

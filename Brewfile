@@ -9,15 +9,16 @@
 tap "homebrew/services"
 tap "heroku/brew"
 
+brew "openssl"
+brew "readline", link: true
+
 brew "chromedriver"
 brew "curl"
 brew "git"
 brew "heroku/brew/heroku"
 brew "imagemagick@7", link: true
-brew "openssl"
 brew "phantomjs"
 brew "postgresql"
-brew "readline", link: true
 brew "redis"
 brew "ssh-copy-id"
 brew "tmux"
