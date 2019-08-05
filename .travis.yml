@@ -2,9 +2,9 @@ os: osx
 osx_image: xcode10.2
 
 before_script:
-  - brew uninstall --force brew-cask
+  - brew remove --force $(brew list)
   - brew update
-  - brew install shellcheck
+  - brew install shellcheck git
   - __rvm_unload
 
 script:
