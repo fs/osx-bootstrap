@@ -46,7 +46,7 @@ git clone -b master https://github.com/fs/osx-bootstrap.git
 * **bundler** gem for managing Ruby libraries
 * Software installed with Brew Cask in to `/Applications`:
   * iTerm2
-  * Skype
+  * Zoom
   * Slack
   * Google Chrome,
   * Sublime Text 3
