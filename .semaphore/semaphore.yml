@@ -13,11 +13,12 @@ blocks:
     task:
       prologue:
         commands:
+          - cache restore
           - checkout
           - brew install shellcheck
+          - cache store
 
       jobs:
       - name: Test
         commands:
-          - checkout
           - bin/ci
