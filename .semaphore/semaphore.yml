@@ -11,6 +11,11 @@ agent:
 blocks:
   - name: Build
     task:
+      prologue:
+        commands:
+          - checkout
+          - brew install shellcheck
+
       jobs:
       - name: Test
         commands:
