@@ -2,14 +2,60 @@
 # https://docs.semaphoreci.com/article/139-language-swift
 version: v1.0
 name: OSX Bootstrap
+
 agent:
   machine:
     type: a1-standard-4
-    os_image: macos-mojave
+    os_image: macos-mojave-xcode11
+
+execution_time_limit:
+  hours: 1
+
+auto_cancel:
+  queued:
+    when: 'true'
+
+fail_fast:
+  stop:
+    when: 'true'
+
 blocks:
-  - name: Run tests
+  - name: Test
     task:
-      jobs:
-      - name: Run tests
+      prologue:
         commands:
-          - bin/ci
+          - checkout
+
+      jobs:
+      - name: quality
+        commands:
+          - brew install shellcheck
+          - bin/quality
+
+      - name: osx_version
+        commands:
+          - modules/osx_version.bash
+
+      - name: projectdir
+        commands:
+          - modules/projectdir.bash
+
+      - name: brew
+        commands:
+          - modules/brew.bash
+
+      - name: ruby
+        commands:
+          - modules/ruby.bash
+
+      - name: node
+        commands:
+          - modules/node.bash
+
+      - name: osx_defaults
+        commands:
+          - modules/osx_defaults.bash
+
+      - name: osx_security
+        commands:
+          - modules/osx_security.bash
