@@ -17,7 +17,8 @@ brew "imagemagick"
 brew "watch"
 brew "z"
 brew "ssh-copy-id"
-brew "heroku/brew/heroku"
+tap "heroku/brew"
+brew "heroku"
 brew "tmux"
 
 # Essential Mac applications
