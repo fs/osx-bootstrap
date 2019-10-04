@@ -20,16 +20,42 @@ fail_fast:
     when: 'true'
 
 blocks:
-  - name: Build
+  - name: Test
     task:
       prologue:
         commands:
-          - cache restore
           - checkout
-          - brew install shellcheck
-          - cache store
 
       jobs:
-      - name: Test
+      - name: quality
         commands:
-          - bin/ci
+          - brew install shellcheck
+          - bin/quality
+
+      - name: osx_version
+        commands:
+          - modules/osx_version.bash
+
+      - name: projectdir
+        commands:
+          - modules/projectdir.bash
+
+      - name: brew
+        commands:
+          - modules/brew.bash
+
+      - name: ruby
+        commands:
+          - modules/ruby.bash
+
+      - name: node
+        commands:
+          - modules/node.bash
+
+      - name: osx_defaults
+        commands:
+          - modules/osx_defaults.bash
+
+      - name: osx_security
+        commands:
+          - modules/osx_security.bash
