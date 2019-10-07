@@ -15,10 +15,6 @@ auto_cancel:
   queued:
     when: 'true'
 
-fail_fast:
-  stop:
-    when: 'true'
-
 blocks:
   - name: Test
     task:
