@@ -20,7 +20,7 @@ blocks:
     task:
       env_vars:
         - name: HOMEBREW_NO_AUTO_UPDATE
-          value: 1
+          value: "true"
 
       prologue:
         commands:
