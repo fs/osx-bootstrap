@@ -28,30 +28,19 @@ blocks:
           - brew install shellcheck
           - bin/quality
 
-      - name: osx_version
-        commands:
-          - modules/osx_version.bash
-
-      - name: projectdir
+      - name: workspace
         commands:
           - modules/projectdir.bash
 
-      - name: brew
+      - name: dev
         commands:
           - modules/brew.bash
-
-      - name: ruby
-        commands:
           - modules/ruby.bash
+          #  Disable node test since need to update
+          # - modules/node.bash
 
-      - name: node
+      - name: osx
         commands:
-          - modules/node.bash
-
-      - name: osx_defaults
-        commands:
+          - modules/osx_version.bash
           - modules/osx_defaults.bash
-
-      - name: osx_security
-        commands:
           - modules/osx_security.bash
