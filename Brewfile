@@ -37,6 +37,9 @@ cask "spectacle"
 # Node version manager
 brew "nvm"
 
+# Yarn package manager
+brew "yarn"
+
 # Ruby
 brew "rbenv"
 brew "ruby-build"
