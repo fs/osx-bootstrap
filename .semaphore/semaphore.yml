@@ -18,6 +18,10 @@ auto_cancel:
 blocks:
   - name: Test
     task:
+      env_vars:
+        - name: HOMEBREW_NO_AUTO_UPDATE
+          value: 1
+
       prologue:
         commands:
           - checkout
