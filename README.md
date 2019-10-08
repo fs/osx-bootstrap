@@ -1,7 +1,5 @@
 # OS X Bootstrap
 
-[![Build Status](https://travis-ci.org/fs/osx-bootstrap.svg?branch=master)](https://travis-ci.org/fs/osx-bootstrap)
-
 Script to set up a macOS X for Rails development.
 
 ## Requirements

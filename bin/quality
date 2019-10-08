@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -e
+
+shellcheck --shell bash --exclude=SC1090,SC2086 modules/* bin/setup
