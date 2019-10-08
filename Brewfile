@@ -17,9 +17,9 @@ brew "imagemagick"
 brew "watch"
 brew "z"
 brew "ssh-copy-id"
-brew "heroku/brew/heroku"
+tap "heroku/brew"
+brew "heroku"
 brew "tmux"
-brew "curl", args: ["with-openssl"]
 
 # Essential Mac applications
 tap "caskroom/cask"
