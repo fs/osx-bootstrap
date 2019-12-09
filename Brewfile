@@ -22,8 +22,10 @@ brew "heroku"
 brew "tmux"
 
 # Essential Mac applications
-tap "caskroom/cask"
-tap "caskroom/versions"
+
+#Don't need to install cask anymore, you just need homebrew
+#tap "caskroom/cask"
+#tap "caskroom/versions"
 
 cask "java"
 cask "skype"
