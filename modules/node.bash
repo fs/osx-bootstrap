@@ -11,7 +11,7 @@ set +e
 source "$(brew --prefix nvm)/nvm.sh"
 set -e
 
-if test -z "$(nvm ls|grep "node")"; then
+if test -n "$(nvm ls|grep "node"|grep "N/A")"; then
   info_echo "Install latest Node.js version"
   nvm install node
 fi
