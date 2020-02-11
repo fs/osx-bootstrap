@@ -5,44 +5,36 @@
 #  RBENV_ROOT=/usr/local/var/rbenv
 #  NVM_DIR=/usr/local/var/nvm
 
-# Essential terminal utilities
+tap "heroku/brew"
 tap "homebrew/services"
 
-brew "openssl"
-brew "readline", link: true
 brew "git"
-brew "postgresql"
-brew "redis"
-brew "imagemagick"
-brew "watch"
-brew "z"
-brew "ssh-copy-id"
-tap "heroku/brew"
 brew "heroku"
+brew "imagemagick"
+brew "nvm"
+brew "openssl"
+brew "postgresql", restart_service: true
+brew "rbenv"
+brew "rbenv-default-gems"
+brew "readline", link: true
+brew "redis", restart_service: true
+brew "ruby-build"
+brew "ssh-copy-id"
 brew "tmux"
+brew "watch"
+brew "yarn"
+brew "z"
 
-# Essential Mac applications
-
-#Don't need to install cask anymore, you just need homebrew
-#tap "caskroom/cask"
-#tap "caskroom/versions"
-
-cask "java"
-cask "skype"
-cask "iterm2"
-cask "the-unarchiver"
+cask "chromedriver"
 cask "google-chrome"
-cask "sublime-text"
+cask "graphiql"
+cask "iterm2"
+cask "java"
+cask "postman"
+cask "skype"
 cask "slack"
 cask "spectacle"
-
-# Node version manager
-brew "nvm"
-
-# Yarn package manager
-brew "yarn"
-
-# Ruby
-brew "rbenv"
-brew "ruby-build"
-brew "rbenv-default-gems"
+cask "sublime-text"
+cask "the-unarchiver"
+cask "visual-studio-code"
+cask "zoomus"
