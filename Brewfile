@@ -6,7 +6,6 @@
 #  NVM_DIR=/usr/local/var/nvm
 
 tap "heroku/brew"
-tap "homebrew/services"
 
 brew "git"
 brew "heroku"
