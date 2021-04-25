@@ -5,7 +5,7 @@ source "$osx_bootstrap/modules/functions.bash"
 
 if test ! "$(command -v brew)"; then
   info_echo "Install Homebrew, a good OS X package manager"
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
   info_echo "Update Homebrew"
   brew update
