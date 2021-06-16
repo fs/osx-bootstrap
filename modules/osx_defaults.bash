@@ -34,7 +34,7 @@ done
 ###############################################################################
 
 # Disable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false # мне кажется это не удобно
 
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en" "ru"
@@ -131,12 +131,11 @@ defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock magnification -boolean false
 
 # Show dock on right
-defaults write com.apple.dock orientation -string 'right'
-
+defaults write com.apple.dock orientation -string 'right' # точно ли это удобно?
+ 
 ###############################################################################
-# Safari & WebKit                                                             #
+# Safari & WebKit    # Может сделать такое же для google chrome?                                                          #
 ###############################################################################
-
 # Set Safari’s home page to `about:blank` for faster loading
 defaults write com.apple.Safari HomePage -string "about:blank"
 
