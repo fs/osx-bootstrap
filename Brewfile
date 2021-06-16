@@ -5,10 +5,10 @@
 #  RBENV_ROOT=/usr/local/var/rbenv
 #  NVM_DIR=/usr/local/var/nvm
 
-tap "heroku/brew"
+tap "heroku/homebrew-brew" # не понятно для чего это
 
 brew "git"
-brew "heroku"
+#brew "heroku"
 brew "imagemagick"
 brew "nvm"
 brew "openssl"
@@ -30,10 +30,10 @@ cask "graphiql"
 cask "iterm2"
 cask "java"
 cask "postman"
-cask "skype"
+#cask "skype"
 cask "slack"
-cask "spectacle"
-cask "sublime-text"
+#cask "spectacle"
+#cask "sublime-text"
 cask "the-unarchiver"
 cask "visual-studio-code"
 cask "zoomus"

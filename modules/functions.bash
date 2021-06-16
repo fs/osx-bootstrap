@@ -1,6 +1,6 @@
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export RBENV_ROOT=/usr/local/var/rbenv
-export NVM_DIR=/usr/local/var/nvm
+#export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+#export RBENV_ROOT=/usr/local/var/rbenv
+#export NVM_DIR=/usr/local/var/nvm
 
 red=$(tput setaf 1)
 green=$(tput setaf 2)
