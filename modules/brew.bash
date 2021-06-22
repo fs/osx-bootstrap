@@ -14,8 +14,8 @@ fi
 info_echo "Install Brew formalue"
 
 brew tap "Homebrew/bundle"
-brew bundle install --file="$osx_bootstrap/Brewfile" # ошибка здесь command not found
+brew bundle install --file="$osx_bootstrap/Brewfile" # error here command not found
 
 info_echo "Remove outdated versions from the cellar"
 
-brew cleanup # ошибка здесь command not found
+brew cleanup # error here command not found

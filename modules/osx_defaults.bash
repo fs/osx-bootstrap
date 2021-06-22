@@ -130,8 +130,8 @@ defaults write com.apple.dock showhidden -bool true
 # Turn off dock icons magnification
 defaults write com.apple.dock magnification -boolean false
 
-# Show dock on right
-defaults write com.apple.dock orientation -string 'right' # точно ли это удобно?
+# Show dock on right #Denis: I mean that is'nt used for all
+#defaults write com.apple.dock orientation -string 'right' 
  
 ###############################################################################
 # Safari & WebKit    # Может сделать такое же для google chrome?                                                          #
