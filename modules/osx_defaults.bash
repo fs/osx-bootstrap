@@ -34,7 +34,7 @@ done
 ###############################################################################
 
 # Disable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false 
 
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en" "ru"
@@ -130,13 +130,12 @@ defaults write com.apple.dock showhidden -bool true
 # Turn off dock icons magnification
 defaults write com.apple.dock magnification -boolean false
 
-# Show dock on right
-defaults write com.apple.dock orientation -string 'right'
-
+# Show dock on right #Denis: I mean that is'nt used for all
+#defaults write com.apple.dock orientation -string 'right' 
+ 
 ###############################################################################
-# Safari & WebKit                                                             #
+# Safari & WebKit    # Может сделать такое же для google chrome?                                                          #
 ###############################################################################
-
 # Set Safari’s home page to `about:blank` for faster loading
 defaults write com.apple.Safari HomePage -string "about:blank"
 
@@ -205,7 +204,7 @@ defaults write com.apple.terminal StringEncodings -array 4
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
-# Kill affected applications                                                  #
+# Kill affected applications     # не понятно зачем                                             #
 ###############################################################################
 
 for app in "cfprefsd" "Dock" "Finder" "Safari"  "SystemUIServer" "iTerm"; do
