@@ -1,11 +1,11 @@
 # Make sure you have following env variables
 # when using this Brewfile or use it with modules/brew.bash
 #
-#  HOMEBREW_CASK_OPTS="--appdir=/Applications"
+ HOMEBREW_CASK_OPTS="--appdir=/Applications"
 #  RBENV_ROOT=/usr/local/var/rbenv
 #  NVM_DIR=/usr/local/var/nvm
 
-tap "heroku/brew"
+tap "heroku/brew" 
 
 brew "git"
 brew "heroku"
@@ -30,9 +30,9 @@ cask "graphiql"
 cask "iterm2"
 cask "java"
 cask "postman"
-cask "skype"
+#cask "skype"
 cask "slack"
-cask "spectacle"
+#cask "spectacle"
 cask "sublime-text"
 cask "the-unarchiver"
 cask "visual-studio-code"
