@@ -34,7 +34,7 @@ done
 ###############################################################################
 
 # Disable “natural” (Lion-style) scrolling
-# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false # мне кажется это не удобно
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false 
 
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en" "ru"
@@ -204,7 +204,7 @@ defaults write com.apple.terminal StringEncodings -array 4
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
-# Kill affected applications                                                  #
+# Kill affected applications     # не понятно зачем                                             #
 ###############################################################################
 
 for app in "cfprefsd" "Dock" "Finder" "Safari"  "SystemUIServer" "iTerm"; do
