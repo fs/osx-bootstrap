@@ -15,7 +15,7 @@ fi
 info_echo "Install Brew formalue"
 
 brew tap "Homebrew/bundle" 2> /dev/null
-brew bundle install --file="$osx_bootstrap/Brewfile" 
+brew bundle install --file="$osx_bootstrap/Brewfile"
 
 info_echo "Remove outdated versions from the cellar"
 
