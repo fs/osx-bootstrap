@@ -2,6 +2,7 @@
 
 osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
 source "$osx_bootstrap/modules/functions.bash"
+  export PATH="/opt/homebrew/bin:$PATH"
 
 if test ! "$(command -v brew)"; then
   info_echo "Install Homebrew, a good OS X package manager"
@@ -14,7 +15,7 @@ fi
 info_echo "Install Brew formalue"
 
 brew tap "Homebrew/bundle" 2> /dev/null
-brew bundle install --file="$osx_bootstrap/Brewfile"
+brew bundle install --file="$osx_bootstrap/Brewfile" 
 
 info_echo "Remove outdated versions from the cellar"
 

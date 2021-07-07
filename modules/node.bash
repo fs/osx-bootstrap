@@ -8,7 +8,10 @@ info_echo "Enable NVM alias"
 # https://github.com/creationix/nvm/issues/721
 # https://github.com/travis-ci/travis-ci/issues/3854#issuecomment-99492695
 set +e
+#For remove semaphoreci warning 
+# shellcheck disable=SC1091 
 source "$(brew --prefix nvm)/nvm.sh"
+
 set -e
 
 if test -n "$(nvm ls|grep "node"|grep "N/A")"; then
