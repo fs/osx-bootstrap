@@ -1,22 +1,8 @@
 #!/usr/bin/env bash
 
-osx_bootstrap="$(cd "$(dirname "$self")/.." && pwd -P)" 
+osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
 source "$osx_bootstrap/modules/functions.bash"
-
-if [ -f ~/.bashrc ] && [ -f ~/.zshrc ]
-then
-  chmod 746 ~/.zshrc 
-  chmod 746 ~/.bashrc
-  echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.bashrc
-  echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.zshrc
-else 
-  cp /etc/bashrc ~/.bashrc
-  cp /etc/zshrc ~/.zshrc
-  chmod 746 ~/.zshrc 
-  chmod 746 ~/.bashrc
-  echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.bashrc
-  echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.zshrc
-fi 
+  export PATH="/opt/homebrew/bin:$PATH"
 
 if test ! "$(command -v brew)"; then
   info_echo "Install Homebrew, a good OS X package manager"
