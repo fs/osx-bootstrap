@@ -11,7 +11,7 @@ else
   info_echo "Update Homebrew"
   brew update
 fi
-
+#comment1
 info_echo "Install Brew formalue"
 
 brew tap "Homebrew/bundle" 2> /dev/null
