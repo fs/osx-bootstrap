@@ -20,7 +20,6 @@ modules=(
   osx_defaults
   osx_security
   dotfiles
-  sublime_bootstrap
 )
 
 for module in "${modules[@]}"
