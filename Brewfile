@@ -1,7 +1,7 @@
 # Make sure you have following env variables
 # when using this Brewfile or use it with modules/brew.bash
 #
-#  HOMEBREW_CASK_OPTS="--appdir=/Applications"
+  HOMEBREW_CASK_OPTS="--appdir=/Applications"
 #  RBENV_ROOT=/usr/local/var/rbenv
 #  NVM_DIR=/usr/local/var/nvm
 
@@ -28,12 +28,8 @@ cask "chromedriver"
 cask "google-chrome"
 cask "graphiql"
 cask "iterm2"
-cask "java"
 cask "postman"
-cask "skype"
 cask "slack"
-cask "spectacle"
-cask "sublime-text"
 cask "the-unarchiver"
 cask "visual-studio-code"
-cask "zoomus"
+cask "zoom"
