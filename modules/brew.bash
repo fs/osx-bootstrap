@@ -2,6 +2,7 @@
 
 osx_bootstrap="$(cd "$(dirname "$0")/.." && pwd -P)"
 source "$osx_bootstrap/modules/functions.bash"
+export PATH="/opt/homebrew/bin:$PATH"
 
 if test ! "$(command -v brew)"; then
   info_echo "Install Homebrew, a good OS X package manager"
