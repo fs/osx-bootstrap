@@ -19,4 +19,7 @@ brew bundle install --file="$osx_bootstrap/Brewfile"
 
 info_echo "Remove outdated versions from the cellar"
 
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /$HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 brew cleanup
