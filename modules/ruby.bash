@@ -9,11 +9,8 @@ if ! command -v rbenv &> /dev/null
 then
   echo 'Installing rbenv'
   # shellcheck disable=SC2016
-  [ -f "$HOME/.zprofile" ] && echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-  # shellcheck disable=SC2016
   [ -f "$HOME/.zshrc" ] && echo 'eval "$(rbenv init -)"' >> ~/.zshrc
   brew install rbenv
-  brew upgrade rbenv ruby-build
   eval "$(rbenv init -)"
   /bin/bash -c "curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash"
 else
