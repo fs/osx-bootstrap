@@ -1,6 +1,6 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export RBENV_ROOT=/usr/local/var/rbenv
-export NVM_DIR=/usr/local/var/nvm
+#export RBENV_ROOT=/usr/local/var/rbenv
+#export NVM_DIR=/usr/local/var/nvm
 
 red=$(tput setaf 1)
 green=$(tput setaf 2)
@@ -27,6 +27,6 @@ catch_exit() {
 # Catch exit
 trap catch_exit EXIT
 
-# Setup loggin
+# Setup logging
 exec > >(tee -i "$HOME/.osx-bootstrap.$(date +%Y-%m-%d-%H-%M-%S).log")
 exec 2>&1
